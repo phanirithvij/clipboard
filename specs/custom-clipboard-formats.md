@@ -95,7 +95,7 @@ ergonomics exactly where they're sound.
 - **nocgo build:** `Register` returns a token and never panics; `Read`/`Write`
   degrade exactly like the existing nocgo path (nil / closed channel).
 
-## 5. Per-platform resolution (the load-bearing part)
+## 5. Per-platform resolution (the decisive part)
 
 A Go-level indirection — `resolve(Format) (nativeType, error)` — keeps all platform
 specifics out of the public API and out of user code.
@@ -205,7 +205,7 @@ Windows. No new Cgo surface, consistent with the purego/pure-Go backends.
 - **Enumeration (#89) still reserved.** The tagged multi-format watch shipped in
   #124 and already accepts registered tokens; `Formats() []Format` remains the
   one unshipped half.
-- **The alias tables are load-bearing after all (#160).** The first rollout
+- **The alias tables are required after all (#160).** The first rollout
   shipped resolution as "the MIME string itself" on every backend, and grew the
   §5 alias tables only *inbound*, when enumeration (#89) had to name the types it
   found. That made resolution asymmetric: `Register("image/png")` registered a

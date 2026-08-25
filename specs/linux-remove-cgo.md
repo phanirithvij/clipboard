@@ -216,7 +216,7 @@ CI already runs Linux under **both** `CGO_ENABLED=1` and `=0` with `Xvfb` and
   tests carry a `CGO_ENABLED=0 → t.Skip` guard (they degraded to nocgo). With
   Linux now working cgo-free, that guard makes the CGO=0 job hollow — exactly the
   trap caught in darwin #117 (coverage 45%→87%). Exempt Linux from the skip so
-  both cgo modes run the real tests. **This is the load-bearing CI change.**
+  both cgo modes run the real tests. **This is the CI change that matters.**
 - Keep the **TARGETS regression** (#60/#99, `clipboard_targets_linux_test.go`)
   and the existing read/write tests green against the new backend.
 - Add **wire-level unit tests** that need no X server: `.Xauthority` record

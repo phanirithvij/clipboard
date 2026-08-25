@@ -32,7 +32,7 @@ count, and nothing to flush.
 
 That asymmetry is a property of the platforms, not a gap in this package, and no
 API can hide it. What it *does* mean is that the option must be honest about
-where it applies — see §4, which is the load-bearing part of this design.
+where it applies — see §4, which is the decisive part of this design.
 
 ## 3. Design decision
 
